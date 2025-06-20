@@ -52,7 +52,7 @@ export default async function HeroLanding() {
         </div> */}
         <div className=''>
           <Image
-            src='/_static/flowlogo.png'
+            src='/_static/flowstate1.png'
             alt='Flow State Logo'
             width={400}
             height={400}
