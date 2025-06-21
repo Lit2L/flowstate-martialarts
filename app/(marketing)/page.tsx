@@ -1,4 +1,5 @@
 import { infos } from '@/config/landing'
+import BookingSection from '@/components/booking-section'
 import BentoGrid from '@/components/sections/bentogrid'
 import Features from '@/components/sections/features'
 import HeroLanding from '@/components/sections/hero-landing'
@@ -11,6 +12,7 @@ export default function IndexPage() {
   return (
     <>
       <HeroLanding />
+      <BookingSection />
       {/* <PreviewLanding />
       <Powered />
       <BentoGrid /> */}
