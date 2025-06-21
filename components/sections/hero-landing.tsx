@@ -10,22 +10,6 @@ import { buttonVariants } from '@/components/ui/button'
 import { Icons } from '@/components/shared/icons'
 
 export default async function HeroLanding() {
-  const { stargazers_count: stars } = await fetch(
-    'https://api.github.com/repos/mickasmt/next-saas-stripe-starter',
-    {
-      ...(process.env.GITHUB_OAUTH_TOKEN && {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
-          'Content-Type': 'application/json'
-        }
-      }),
-      // data will revalidate every hour
-      next: { revalidate: 3600 }
-    }
-  )
-    .then((res) => res.json())
-    .catch((e) => console.log(e))
-
   return (
     <section className='space-y-6 py-20 sm:py-28 lg:py-36'>
       <div className='container flex max-w-5xl flex-col items-center gap-5 text-center'>
@@ -54,13 +38,13 @@ export default async function HeroLanding() {
           <Image
             src='/_static/flowstate1.png'
             alt='Flow State Logo'
-            width={400}
-            height={400}
+            width={300}
+            height={300}
             className='mx-auto mb-4'
           />
         </div>
         <p
-          className='max-w-2xl text-balance leading-normal text-muted-foreground sm:text-xl sm:leading-8'
+          className='sm:text-md max-w-2xl text-balance leading-normal text-muted-foreground sm:leading-8'
           style={{ animationDelay: '0.35s', animationFillMode: 'forwards' }}
         >
           On The Way..

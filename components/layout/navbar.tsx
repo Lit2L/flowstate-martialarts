@@ -57,8 +57,11 @@ export function NavBar({ scroll = false }: NavBarProps) {
               height={32}
               className='h-8 w-8'
             />
-            <span className='font-heading text-xs font-bold'>
+            <span className='text-md font-geist font-bold'>
               {siteConfig.name}
+            </span>
+            <span className='hidden font-heading text-xs font-bold sm:inline-block'>
+              Martial Arts
             </span>
           </Link>
 
