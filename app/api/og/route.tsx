@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { ImageResponse } from '@vercel/og'
 
 import { ogImageSchema } from '@/lib/validations/og'
@@ -85,7 +86,7 @@ export async function GET(req: Request) {
               style={{ fontFamily: 'Inter', fontWeight: 'normal' }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 alt='avatar'
                 width='65'
                 src={`https://github.com/${githubName}.png`}
